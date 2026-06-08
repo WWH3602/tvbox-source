@@ -1,0 +1,4 @@
+# 测试文件目录
+# 下面的所有 .json 文件被 git 忽略
+*.json
+!.gitkeep

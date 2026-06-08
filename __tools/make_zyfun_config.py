@@ -11,8 +11,9 @@ import subprocess
 import os
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-CONFIG_PATH = os.path.join(SCRIPT_DIR, "config.json")
-ZYFUN_PATH = os.path.join(SCRIPT_DIR, "zyfun_config.json")
+ROOT_DIR   = os.path.dirname(SCRIPT_DIR)           # tvbox-source/
+CONFIG_PATH = os.path.join(ROOT_DIR, "config.json")
+ZYFUN_PATH = os.path.join(ROOT_DIR, "zyfun_config.json")
 
 def build_zyfun_config():
     """从 config.json 生成 zyfun_config.json"""
