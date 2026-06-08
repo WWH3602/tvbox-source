@@ -706,10 +706,6 @@
       "updatedAt": 1780033646806
     },
     {
-      "key": "1",
-      "name": "== 1 =="
-    },
-    {
       "key": "101影视",
       "name": "🖐101影视",
       "type": 3,
@@ -752,18 +748,6 @@
       "ext": "./XBPQ/139影视.json"
     },
     {
-      "key": "2",
-      "name": "== 2 =="
-    },
-    {
-      "key": "3",
-      "name": "== 3 =="
-    },
-    {
-      "key": "3.1",
-      "name": "== 3.1 =="
-    },
-    {
       "key": "360",
       "name": "360",
       "type": 3,
@@ -771,10 +755,6 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
-    },
-    {
-      "key": "4",
-      "name": "== 4 =="
     },
     {
       "key": "4KHDR",
@@ -787,10 +767,6 @@
       "timeout": 60
     },
     {
-      "key": "5",
-      "name": "== 5 =="
-    },
-    {
       "key": "555",
       "name": "🤩555 ",
       "type": 3,
@@ -799,10 +775,6 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "./XBPQ/555.json"
-    },
-    {
-      "key": "6",
-      "name": "== 6 =="
     },
     {
       "key": "6080",
@@ -823,14 +795,6 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "./XBPQ/6v电影.json"
-    },
-    {
-      "key": "7",
-      "name": "== 7 =="
-    },
-    {
-      "key": "8",
-      "name": "== 8 =="
     },
     {
       "key": "88Pan",
@@ -9446,12 +9410,6 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "./XBPQ/libvio.json"
-    },
-    {
-      "key": "logError",
-      "name": "生成式错误日志",
-      "msg": "get appv2_path error:ENOENT: no such file or directory, open 'C:\\Users\\dashen\\AppData\\Roaming\\zyplayer\\file\\drpy_dzlive\\appv2.txt'\n",
-      "type": 8
     },
     {
       "key": "mifun",
