@@ -6,7 +6,6 @@
   1. 从 __sources/多仓地址簿.md 读取多仓 URL 列表
   2. 尝试用 curl 拉取每个多仓的 JSON
   3. 与 config.json 去重，输出 __temp/待测试_YYYYMMDD.json
-  4. 如果 config.json 有更新，自动派生 zyfun_config.json
 
 用法:
   python auto_update.py              # 拉取 + 对比 + 输出测试文件
@@ -18,16 +17,17 @@ import json, os, sys, re, uuid, datetime, subprocess
 import shutil
 
 SCRIPT_DIR  = os.path.dirname(os.path.abspath(__file__))
-CONFIG_PATH = os.path.join(SCRIPT_DIR, "config.json")
-SOURCES_MD  = os.path.join(SCRIPT_DIR, "__sources", "多仓地址簿.md")
-TEMP_DIR    = os.path.join(SCRIPT_DIR, "__temp")
-TOOLS_DIR   = os.path.join(SCRIPT_DIR, "__tools")
+ROOT_DIR    = os.path.dirname(SCRIPT_DIR)            # tvbox-source/
+CONFIG_PATH = os.path.join(ROOT_DIR, "config.json")
+SOURCES_MD  = os.path.join(ROOT_DIR, "__sources", "多仓地址簿.md")
+TEMP_DIR    = os.path.join(ROOT_DIR, "__temp")
+TOOLS_DIR   = SCRIPT_DIR
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
 
 os.makedirs(TEMP_DIR, exist_ok=True)
-os.makedirs(os.path.join(SCRIPT_DIR, "__sources"), exist_ok=True)
+os.makedirs(os.path.join(ROOT_DIR, "__sources"), exist_ok=True)
 
 
 # ── 1. 读取多仓地址簿 ────────────────────────────────────────────
@@ -50,30 +50,37 @@ def load_source_registry():
             continue
         parts = [p.strip() for p in line.split("|")]
         if len(parts) >= 3 and parts[1]:
-            sources.append({
-                "name":   parts[1],
-                "url":    parts[2],
-                "status": parts[3] if len(parts) > 3 else "?",
-                "note":   parts[4] if len(parts) > 4 else "",
-            })
+            url = parts[2].strip().strip("`").strip()
+            if url:
+                sources.append({
+                    "name":   parts[1],
+                    "url":    url,
+                    "status": parts[3].strip() if len(parts) > 3 else "?",
+                    "note":   parts[4].strip() if len(parts) > 4 else "",
+                })
     return sources
 
 
 # ── 2. 拉取单个多仓 ────────────────────────────────────────────
 def fetch_url(url, name):
-    """用 curl 拉取 URL，返回 (原始文本, 错误信息)"""
+    """用 curl 拉取 URL，优先 raw bytes 模式（避免编码损坏），返回 (原始文本, 错误信息)"""
     if not url or url.startswith("#"):
         return None, "空地址"
     cmd = [
         "curl", "-sL", "-A", UA,
         "--tlsv1.2", "--tls-max", "1.2",
         "-m", "25",
+        "--compressed",
         url
     ]
     try:
-        r = subprocess.run(cmd, capture_output=True, encoding="utf-8", errors="replace", timeout=30)
-        if r.returncode != 0 or not r.stdout:
+        # 关键：不用 encoding，让 curl 输出 raw bytes
+        r = subprocess.run(cmd, capture_output=True, timeout=30)
+        if r.returncode != 0:
             return None, f"exit={r.returncode}"
+        if not r.stdout:
+            return None, "空响应"
+        # 返回 (bytes, None) 或 (str, None)
         return r.stdout, None
     except Exception as e:
         return None, str(e)
@@ -83,7 +90,13 @@ def fetch_url(url, name):
 def try_parse_json(text):
     if not text:
         return None
-    text = text.strip()
+    # bytes → str（关键：用 errors='replace' 避免编码崩溃，再清 \r）
+    if isinstance(text, bytes):
+        try:
+            text = text.decode("utf-8", errors="replace")
+        except Exception:
+            return None
+    text = text.replace("\r", "").strip()
     # 去 BOM / markdown
     text = re.sub(r"^\ufeff", "", text)
     text = re.sub(r"^```(?:json)?\s*", "", text, flags=re.MULTILINE)
@@ -174,25 +187,6 @@ def diff_with_config(new_sites, config_sites):
         else:
             to_add.append(s)
     return to_add, dup
-
-
-# ── 6. 派生 zyfun_config.json ──────────────────────────────────
-def build_zyfun():
-    with open(CONFIG_PATH, encoding="utf-8") as f:
-        data = json.load(f)
-    zyfun = {}
-    zyfun["site"] = []
-    for s in data["sites"]:
-        item = dict(s)
-        item["search"] = bool(item.get("search", 0))
-        zyfun["site"].append(item)
-    zyfun["analyze"] = data.get("analyze", [])
-    zyfun["iptv"]    = data.get("iptv", [])
-    zyfun["channel"] = data.get("channel", [])
-    out = os.path.join(SCRIPT_DIR, "zyfun_config.json")
-    with open(out, "w", encoding="utf-8") as f:
-        json.dump(zyfun, f, ensure_ascii=False, indent=2)
-    return len(zyfun["site"])
 
 
 # ── 主程序 ─────────────────────────────────────────────────────
@@ -302,18 +296,18 @@ def main():
     # 推送
     if do_push:
         print("\n提交 config.json 变更...")
-        r = subprocess.run(["git", "-C", SCRIPT_DIR, "status", "--short"],
+        r = subprocess.run(["git", "-C", ROOT_DIR, "status", "--short"],
                           capture_output=True, text=True)
         if not r.stdout.strip():
             print("  无变更，跳过")
         else:
-            subprocess.run(["git", "-C", SCRIPT_DIR, "add", "config.json", "zyfun_config.json"],
+            subprocess.run(["git", "-C", ROOT_DIR, "add", "config.json"],
                           check=True)
             msg = f"更新影视源 {datetime.date.today()} 增{len(to_add)}站"
-            r = subprocess.run(["git", "-C", SCRIPT_DIR, "commit", "-m", msg],
+            r = subprocess.run(["git", "-C", ROOT_DIR, "commit", "-m", msg],
                               capture_output=True, text=True)
             if "nothing to commit" not in r.stderr and r.returncode == 0:
-                subprocess.run(["git", "-C", SCRIPT_DIR, "push"], check=True)
+                subprocess.run(["git", "-C", ROOT_DIR, "push"], check=True)
                 print(f"  [OK] 已推送: {msg}")
             else:
                 print(f"  无变更或提交失败")

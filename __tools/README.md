@@ -18,17 +18,6 @@ python __tools/auto_update.py --push     # 额外提交 config.json 变更并推
 
 ---
 
-## make_zyfun_config.py（派生脚本）
-
-从 config.json 派生 zyfun_config.json（字段名转换：search 1/0 → true/false）
-
-```bash
-python __tools/make_zyfun_config.py
-python __tools/make_zyfun_config.py --push  # 派生 + 提交 + 推送
-```
-
----
-
 ## add_sites.py（批量添站脚本）
 
 把站点 api 直接追加进 config.json（自动去重）
@@ -41,15 +30,12 @@ python __tools/add_sites.py
 
 ---
 
-## fix_zyfun.py（修复脚本）
+## merge_and_test.py（合并测试脚本）
 
-修复 config.json 历史遗留问题：
-- `site` → `sites` 字段名
-- `search: true/false` → `1/0`
-- `type: 12` → `type: 3`
+合并多个来源的站点数据，并进行可用性测试
 
 ```bash
-python __tools/fix_zyfun.py
+python __tools/merge_and_test.py
 ```
 
 ---
