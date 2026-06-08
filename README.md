@@ -21,9 +21,25 @@ https://cdn.jsdelivr.net/gh/wwh3602/tvbox-source@main/config.json
 
 ---
 
+## ZYFun 专用配置
+
+ZYFun 设备请使用以下地址：
+
+```
+https://wwh3602.github.io/tvbox-source/zyfun_config.json
+```
+
+备用地址：
+
+```
+https://cdn.jsdelivr.net/gh/wwh3602/tvbox-source@main/zyfun_config.json
+```
+
+---
+
 ## 内容概览
 
-- **影视站点**: `1095 个`（2026-06-08 最新）
+- **影视站点**: `1262 个`（2026-06-08 清理后）
 - **线路解析**: `90 个`（jx.xyflv / jx.xmflv / 夜幕 / 冰豆 等）
 - **电视直播**: `38 个` 直播源（APTV / 4k8k / 秋天直播等）
 - **直播频道**: `307 个`（央视 / 卫视 / 地方台 / 海外）

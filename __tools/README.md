@@ -4,6 +4,38 @@
 
 ---
 
+## test_all_sites.py（站点可用性测试）
+
+遍历 `zyfun_config.json` 里每个站点的 `api` URL，测试是否可达并返回 JSON 格式。
+
+```bash
+python __tools/test_all_sites.py                           # 测全部 1349 站（并发30，超时6s）
+python __tools/test_all_sites.py --workers 10 --timeout 10  # 低并发，更稳定
+python __tools/test_all_sites.py --save results.json        # 保存完整结果
+python __tools/test_all_sites.py --active-only              # 只测 isActive=true 的站
+python __tools/test_all_sites.py --type 1                   # 只测 type=1 的采集站
+```
+
+**测试完成后输出**：
+- `✓ 可用` / `✗ 失败` / `○ 无API` 三类统计
+- 失败分类（连接错误 / 非JSON / TIMEOUT / HTTP-4xx）
+- 失败详情列表（含 API URL）
+- `test_results.json` 保存完整结果供后续使用
+
+---
+
+## remove_failed_sites.py（失败站点清理）
+
+根据 `test_results.json` 清理配置中的问题站点。
+
+```bash
+python __tools/remove_failed_sites.py --dry-run              # 预览，不写入
+python __tools/remove_failed_sites.py --backup              # 备份后生成 _clean.json
+python __tools/remove_failed_sites.py --inplace             # 直接覆盖原文件（危险）
+```
+
+---
+
 ## auto_update.py（主控脚本）
 
 自动从多仓拉取 → 对比 config.json 去重 → 输出待测试 JSON
