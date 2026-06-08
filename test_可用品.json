@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "来源": [
+      "https://www.juwanhezi.com/jsonlist?type=one",
+      "https://www.juwanhezi.com/jsonlist?type=many"
+    ],
+    "抓取时间": "2026-06-08",
+    "可用源数": 10,
+    "总测试数": 22
+  },
+  "sources": [
+    {
+      "url": "https://gitlab.com/duomv/dzhipy/-/raw/main/index.json",
+      "sites": 435,
+      "spider": "./jar/pg.jar?md5=7633f8ea346c082b7aa163be58aed023",
+      "keys": [
+        "wallpaper",
+        "homepage",
+        "homeLogo",
+        "spider",
+        "sites",
+        "parses"
+      ]
+    },
+    {
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+      "sites": 298,
+      "spider": "./jar/pg.jar;md5;dffec63fb83a2b31b8606bd4bf6bead9",
+      "keys": [
+        "spider",
+        "lives",
+        "wallpaper",
+        "sites",
+        "parses",
+        "flags"
+      ]
+    },
+    {
+      "url": "https://gh-proxy.com/raw.githubusercontent.com/yw88075/tvbox/main/yw.json",
+      "sites": 151,
+      "spider": "./HeChengChaXiu.jar",
+      "keys": [
+        "spider",
+        "sites",
+        "lives",
+        "parses",
+        "flags",
+        "m3u8ads"
+      ]
+    },
+    {
+      "url": "https://clun.top/box.json",
+      "sites": 79,
+      "spider": "./jar/xbpq.jar;md5;./jar/xbpq.jar.md5",
+      "keys": [
+        "sites",
+        "lives",
+        "doh",
+        "proxy",
+        "hosts",
+        "rules"
+      ]
+    },
+    {
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/guot55/yg/main/pg/bh.json",
+      "sites": 77,
+      "spider": "https://bitbucket.org/guot55/ygbh/raw/main/pro/jar",
+      "keys": [
+        "spider",
+        "warningText",
+        "logo",
+        "wallpaper",
+        "lives",
+        "sites"
+      ]
+    },
+    {
+      "url": "https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json",
+      "sites": 64,
+      "spider": "https://gh-proxy.com/raw.githubusercontent.com/Can",
+      "keys": [
+        "wallpaper",
+        "spider",
+        "lives",
+        "sites",
+        "parses",
+        "ijk"
+      ]
+    },
+    {
+      "url": "http://home.jundie.top:81/top98.json",
+      "sites": 24,
+      "spider": "./jar/top98_1.jar",
+      "keys": [
+        "spider",
+        "lives",
+        "rules",
+        "sites",
+        "parses",
+        "flags"
+      ]
+    },
+    {
+      "url": "http://zhangqun1818.serv00.net/zq/api.json",
+      "sites": 19,
+      "spider": "./pro.jar?md5=007dddc1aedbbe022544d0fa13d11c92",
+      "keys": [
+        "spider",
+        "wallpaper",
+        "sites",
+        "parses",
+        "flags",
+        "rules"
+      ]
+    },
+    {
+      "url": "https://乐哥.xyz/dj.json",
+      "sites": 2,
+      "spider": "./jar/Lge.jar",
+      "keys": [
+        "spider",
+        "sites",
+        "lives",
+        "rules",
+        "parses",
+        "ijk"
+      ]
+    },
+    {
+      "url": "http://ztha.top/TVBox/GYCK.json",
+      "sites": 0,
+      "spider": "",
+      "keys": [
+        "urls"
+      ]
+    }
+  ]
+}
