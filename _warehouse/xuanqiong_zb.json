@@ -1,0 +1,59 @@
+{
+  "lives": [
+    {
+      "name": "泫穹｜综合直播",
+      "type": 0,
+      "url": "https://live.zbds.top/tv/iptv4.m3u",
+      "playerType": 1,
+      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://live.fanmingming.com/tv/{name}.png"
+    },
+    {
+      "name": "泫穹｜YanG综合",
+      "type": 0,
+      "url": "https://tv.iill.top/m3u/Gather",
+      "ua": "okhttp/3.15",
+      "playerType": 1,
+      "epg": "http://epg.112114.xyz/?ch={name}&date={date}"
+    },
+    {
+      "name": "泫穹｜体育直播",
+      "type": 0,
+      "url": "https://tv.iill.top/m3u/Sport",
+      "ua": "okhttp/3.15",
+      "playerType": 1
+    },
+    {
+      "name": "泫穹｜范明明IPv6",
+      "type": 0,
+      "url": "https://live.fanmingming.com/tv/m3u/ipv6.m3u",
+      "playerType": 1,
+      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "泫穹｜MemoryC综合",
+      "type": 0,
+      "url": "https://ghp.ci/raw.githubusercontent.com/MemoryCollection/IPTV/refs/heads/main/itvlist.m3u",
+      "ua": "okhttp/3.15",
+      "playerType": 1,
+      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "泫穹｜肥猫综合",
+      "type": 0,
+      "url": "http://我不是.肥猫.live/TV/tvzb.txt",
+      "playerType": 1,
+      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "泫穹｜电台FM",
+      "type": 0,
+      "url": "https://gh-proxy.com/raw.githubusercontent.com/fanmingming/live/main/radio/m3u/fm.m3u",
+      "playerType": 1
+    }
+  ],
+  "wallpaper": "http://www.饭太硬.top/深色壁纸/api.php"
+}
