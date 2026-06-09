@@ -1,0 +1,118 @@
+{
+  "sites": [
+    {
+      "key": "xuanqiong_ruyi",
+      "name": "泫穹｜如意采集",
+      "type": 1,
+      "api": "https://cj.rycjapi.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1,
+      "playerType": -1
+    },
+    {
+      "key": "xuanqiong_aiting",
+      "name": "泫穹｜爱听音乐",
+      "type": 3,
+      "api": "https://qist.wyfc.qzz.io/xiaosa/py/%E7%88%B1%E5%90%AC%E9%9F%B3%E4%B9%90.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1
+    },
+    {
+      "key": "xuanqiong_guazi",
+      "name": "泫穹｜瓜子影视",
+      "type": 3,
+      "api": "https://cdn.jsdmirror.com/gh/ouhaibo1980/tvbox@main/py/瓜子.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1
+    },
+    {
+      "key": "xuanqiong_wencai",
+      "name": "泫穹｜文才影视",
+      "type": 3,
+      "api": "https://cdn.jsdmirror.com/gh/ouhaibo1980/tvbox@main/py/文才影视.py",
+      "ext": "{\"site\":\"https://www.hkybqufgh.com,https://www.sizhengxt.com,https://0996zp.com,https://9zhoukj.com/,https://www.sizhengxt.com,https://www.tjrongze.com,https://www.jiabaide.cn,https://cqzuoer.com\"}",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1
+    },
+    {
+      "key": "xuanqiong_modu",
+      "name": "泫穹｜魔都动漫",
+      "type": 1,
+      "api": "https://caiji.moduapi.cc/api.php/provide/vod/?ac=list",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1,
+      "playerType": -1
+    },
+    {
+      "key": "xuanqiong_liangzi",
+      "name": "泫穹｜量子资源",
+      "type": 1,
+      "api": "http://www.lzzy.tv/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1,
+      "playerType": -1
+    },
+    {
+      "key": "xuanqiong_taopian",
+      "name": "泫穹｜淘片资源",
+      "type": 1,
+      "api": "https://taopianapi.com/cjapi/mc10/vod/json.html",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1,
+      "playerType": -1
+    },
+    {
+      "key": "xuanqiong_xinlang",
+      "name": "泫穹｜新浪资源",
+      "type": 1,
+      "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1,
+      "playerType": -1
+    }
+  ],
+  "parses": [
+    {
+      "name": "解析聚合",
+      "type": 3,
+      "url": "Demo"
+    },
+    {
+      "name": "Web聚合",
+      "type": 3,
+      "url": "Web"
+    }
+  ],
+  "lives": [],
+  "flags": [
+    "youku",
+    "qq",
+    "iqiyi",
+    "qiyi",
+    "mgtv",
+    "imgo",
+    "letv",
+    "leshi",
+    "sohu",
+    "pptv",
+    "tudou"
+  ],
+  "wallpaper": "http://www.饭太硬.top/深色壁纸/api.php",
+  "spider": ""
+}
