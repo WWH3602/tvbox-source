@@ -1,12 +1,12 @@
 {
   "urls": [
     {
-      "url": "https://9280.kstore.vip/newwex.json",
-      "name": "王小二"
-    },
-    {
       "url": "https://wwh3602.github.io/tvbox-source/_warehouse/xuanqiong_single.json",
       "name": "泫穹单仓"
+    },
+    {
+      "url": "https://9280.kstore.vip/newwex.json",
+      "name": "王小二"
     },
     {
       "url": "http://影视仓.com/",
