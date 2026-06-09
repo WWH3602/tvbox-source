@@ -89,15 +89,19 @@
 
 ## 推送工具（35% 可用）
 
-| 名称 | API |
-|:---|:---|
-| 123推送 | `https://so.yinpai.xyz/api.php?type=123` |
-| UC推送 | `https://so.yinpai.xyz/api.php?type=uc` |
-| 夸克推送 | `https://so.yinpai.xyz/api.php?type=quark` |
-| 天翼推送 | `https://so.yinpai.xyz/api.php?type=tianyi` |
-| 移动推送 | `https://so.yinpai.xyz/api.php?type=mobile` |
-| 百度推送 | `https://so.yinpai.xyz/api.php?type=baidu` |
-| 采集集合 | `http://zhangqun1818.serv00.net/cj/cjjh.php` |
+> ⚠️ **推送 ≠ 普通站点**：这些是网盘搜索接口（type=6），app 内部调用时会带上 `wd=关键词` 参数。
+> 直接在浏览器打开会显示"参数错误"，这是正常的，不是接口坏了。
+> 在 ZYFun/TVBox 里搜索电影名时，app 会自动调用这些接口返回网盘分享链接。
+
+| 名称 | API | 搜索目标 |
+|:---|:---|:---|
+| 123推送 | `https://so.yinpai.xyz/api.php?type=123` | 123 网盘 |
+| UC推送 | `https://so.yinpai.xyz/api.php?type=uc` | UC 网盘 |
+| 夸克推送 | `https://so.yinpai.xyz/api.php?type=quark` | 夸克网盘 |
+| 天翼推送 | `https://so.yinpai.xyz/api.php?type=tianyi` | 天翼网盘 |
+| 移动推送 | `https://so.yinpai.xyz/api.php?type=mobile` | 移动网盘 |
+| 百度推送 | `https://so.yinpai.xyz/api.php?type=baidu` | 百度网盘 |
+| 采集集合 | `http://zhangqun1818.serv00.net/cj/cjjh.php` | 多源聚合 |
 
 ---
 
