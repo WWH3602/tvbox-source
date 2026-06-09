@@ -70,7 +70,6 @@ tvbox-source/
 │
 ├── __sources/                    ← API 文档
 │   ├── 可用线路api.md             ← 人工验证可用 API 记录
-│   └── 可用线路api_正式.md        ← 正式版
 │
 ├── __tools/                      ← 脚本工具
 │   └── test_zyfun_sites.py       ← 站点可用性测试脚本
