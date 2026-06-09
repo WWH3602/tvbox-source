@@ -49,6 +49,28 @@
       "logo": "https://epg.112114.xyz/logo/{name}.png"
     },
     {
+      "name": "泫穹｜Global直播",
+      "type": 0,
+      "url": "https://live.fanmingming.com/tv/m3u/global.m3u",
+      "playerType": 1,
+      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://live.fanmingming.com/tv/{name}.png"
+    },
+    {
+      "name": "泫穹｜IPTV(IPv6)",
+      "type": 0,
+      "url": "https://live.fanmingming.com/tv/m3u/ipv6.m3u",
+      "playerType": 1,
+      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://live.fanmingming.com/tv/{name}.png"
+    },
+    {
+      "name": "泫穹｜Radio电台",
+      "type": 0,
+      "url": "https://live.fanmingming.com/radio/m3u/index.m3u",
+      "playerType": 1
+    },
+    {
       "name": "泫穹｜电台FM",
       "type": 0,
       "url": "https://gh-proxy.com/raw.githubusercontent.com/fanmingming/live/main/radio/m3u/fm.m3u",

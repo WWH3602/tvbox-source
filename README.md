@@ -1,48 +1,61 @@
-# 影视源库 - TVBox 配置管理
+# 影视源库 - TVBox / ZYFun 配置管理
 
-> **版本**: v2.1 | 2026-06-08
-> **定位**: 统一管理 TVBox 影视播放器的配置文件，GitHub Pages 托管，支持自动更新。
-
----
-
-## 快速使用
-
-在 **TVBox** 中填入订阅地址：
-
-```
-https://wwh3602.github.io/tvbox-source/config.json
-```
-
-备用地址（国内访问更快）：
-
-```
-https://cdn.jsdelivr.net/gh/wwh3602/tvbox-source@main/config.json
-```
+> **版本**: v3.0 | 2026-06-09
+> **定位**: 泫穹影视仓 —— 人工验证可用站点，GitHub Pages 托管。
 
 ---
 
-## ZYFun 专用配置
+## 泫穹系列配置
 
-ZYFun 设备请使用以下地址：
+### 点播仓
 
-```
-https://wwh3602.github.io/tvbox-source/zyfun_config.json
-```
+| 名称 | 地址 |
+|:---|:---|
+| **泫穹单仓**（36站，人工验证） | `https://wwh3602.github.io/tvbox-source/_warehouse/xuanqiong_single.json` |
+| **泫穹聚合仓**（13源，多仓切换） | `https://wwh3602.github.io/tvbox-source/_warehouse/xuanqiong_agg.json` |
 
-备用地址：
+### 直播仓
 
-```
-https://cdn.jsdelivr.net/gh/wwh3602/tvbox-source@main/zyfun_config.json
-```
+| 名称 | 地址 |
+|:---|:---|
+| **泫穹直播仓**（10源，EPG+台标） | `https://wwh3602.github.io/tvbox-source/_warehouse/xuanqiong_zb.json` |
 
 ---
 
-## 内容概览
+## 聚合仓包含的源
 
-- **影视站点**: `1262 个`（2026-06-08 清理后）
-- **线路解析**: `90 个`（jx.xyflv / jx.xmflv / 夜幕 / 冰豆 等）
-- **电视直播**: `38 个` 直播源（APTV / 4k8k / 秋天直播等）
-- **直播频道**: `307 个`（央视 / 卫视 / 地方台 / 海外）
+| # | 仓库 | 说明 |
+|:---|:---|:---|
+| 1 | 王二小放牛娃 | `http://tv.999888987.xyz` |
+| 2 | 泫穹单仓 | 自建 36 站 |
+| 3 | 王小二 | `https://9280.kstore.vip/newwex.json` |
+| 4 | 影视仓 | `http://影视仓.com/` |
+| 5 | 二月红接口 | `https://700sjro44343.vicp.fun/eggp/0211/tv.json` |
+| 6 | 俊哥接口 | `http://home.jundie.top:81/top98.json` |
+| 7 | 宝盒接口 | `http://宝盒接口.top` |
+| 8 | 荐片 | `https://tv.203511.xyz/0821.json` |
+| 9 | Clun在线 | `https://clun.top/box.json` |
+| 10 | 心魔在线 | GitHub 代理 |
+| 11 | 真心在线 | cnb.cool |
+| 12 | 七星影仓 | kstore |
+| 13 | 饭太硬 | ⚠️ 禁用（内存耗尽） |
+
+---
+
+## 直播仓包含的源
+
+| # | 名称 | 说明 |
+|:---|:---|:---|
+| 1 | 综合直播 | vbskycn/iptv 每6小时自动更新 |
+| 2 | YanG综合 | tv.iill.top 综合频道 |
+| 3 | 体育直播 | tv.iill.top 体育赛事 |
+| 4 | 范明明IPv6 | fanmingming IPv6 源 |
+| 5 | MemoryC综合 | MemoryCollection/IPTV |
+| 6 | 肥猫综合 | 肥猫经典直播源 |
+| 7 | Global直播 | fanmingming 全球频道 |
+| 8 | IPTV(IPv6) | fanmingming IPv6 |
+| 9 | Radio电台 | fanmingming 收音机 |
+| 10 | 电台FM | GitHub 代理收音机 |
 
 ---
 
@@ -50,67 +63,35 @@ https://cdn.jsdelivr.net/gh/wwh3602/tvbox-source@main/zyfun_config.json
 
 ```
 tvbox-source/
-├── config.json              ← TVBox 主配置（直接编辑此文件）
+├── _warehouse/                   ← 泫穹系列配置
+│   ├── xuanqiong_single.json     ← 单仓（36站，人工验证）
+│   ├── xuanqiong_agg.json        ← 聚合仓（13源，多仓切换）
+│   └── xuanqiong_zb.json         ← 直播仓（10源，EPG+台标）
 │
-├── __tools/                 ← 脚本工具
-│   ├── README.md            ← 工具说明
-│   ├── auto_update.py       ← 主控脚本：拉取多仓→去重→输出测试文件
-│   ├── add_sites.py         ← 批量添加站点
-│   ├── merge_and_test.py    ← 合并测试脚本
-│   ├── 一键更新.bat         ← Windows 一键提交推送
-│   └── ...
+├── __sources/                    ← API 文档
+│   ├── 可用线路api.md             ← 人工验证可用 API 记录
+│   └── 可用线路api_正式.md        ← 正式版
 │
-├── __sources/               ← 多仓地址簿
-│   └── 多仓地址簿.md        ← 记录所有多仓来源及状态
+├── __tools/                      ← 脚本工具
+│   └── test_zyfun_sites.py       ← 站点可用性测试脚本
 │
-└── README.md                ← 本文件
+├── config.json                   ← 原始完整配置
+├── zyfun_config.json             ← ZYFun 专用配置
+├── .nojekyll                     ← GitHub Pages 下划线目录支持
+└── README.md                     ← 本文件
 ```
 
 ---
 
-## 更新流程
+## 使用方法
 
-```
-发现新多仓 / 博主推荐 →  加到 __sources/多仓地址簿.md
-                                    ↓
-                        python __tools/auto_update.py
-                                    ↓
-              ┌─ __temp/待测试_YYYYMMDD.json（新增站点）
-              │        ↓
-              │  你在 TVBox 测试 → 哪些可用？
-              │        ↓
-              │  告诉 AI 测试结果
-              │        ↓
-              └→ AI 把可用的合并进 config.json
-                            ↓
-                  GitHub Pages 1-3 分钟生效
-```
+### TVBox / ZYFun
 
----
-
-## 多仓接口原理
-
-| 类型 | 特点 | 能否 curl 抓取 |
-|:---|:---|:---|
-| **直接 JSON** | URL 返回 `.json` 文件 | ✅ 可以 |
-| **多仓（UA 路由）** | 浏览器打开是网页，App 打开返回 JSON | ⚠️ 部分可以 |
-| **中文域名** | 肥猫.com / 饭太硬.com 国内 DNS 污染 | ❌ 不可行 |
-| **加密数据** | 返回 hex+二进制加密，需 App 解密 | ❌ 不可行 |
-| **GitHub Raw** | GitHub raw 被墙，需代理 | ⚠️ 需用 ghproxy |
-
-详见 `__sources/多仓地址簿.md`
-
----
-
-## 站点分类说明
-
-| 分组 | 类型 | 特点 |
-|:---|:---|:---|
-| `采集` | T1_JSON CMS 采集 | 直连影视资源站 API，数量多、更新快 |
-| `默认` | T1_JSON | 标准资源站 |
-| `影视` | T1_JSON | 综合影视站 |
-| `官采` | T1_JSON | 官方授权采集 |
-| DRPY/JS 类 | 脚本驱动 | 爬取网页，资源覆盖广 |
+1. 打开 app → 设置 → 配置地址
+2. 填入对应地址：
+   - **单仓**（只要泫穹站点）→ 填单仓地址
+   - **聚合仓**（多仓切换）→ 填聚合仓地址
+3. 等待加载完成
 
 ---
 
@@ -118,10 +99,12 @@ tvbox-source/
 
 | 日期 | 操作 |
 |:---|:---|
-| 2026-06-08 | 清理 zyfun 相关文件，专注 config.json |
-| 2026-06-08 | v2.0 重构目录结构：分离 __tools/ __sources/ __temp/ |
+| 2026-06-09 | v3.0 泫穹系列：单仓36站 + 聚合仓13源 + 直播仓10源 |
+| 2026-06-09 | 人工验证41条可用线路，创建正式文档 |
+| 2026-06-09 | 修复测试脚本3个bug（中文URL/XML/JSONP），可用站65→80 |
+| 2026-06-08 | v2.0 重构目录结构 |
 | 2026-06-08 | 首批 17 个 T1 采集源测试入库 |
 
 ---
 
-**最后更新**: 2026-06-08
+**最后更新**: 2026-06-09
