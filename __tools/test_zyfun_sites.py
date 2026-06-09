@@ -5,6 +5,7 @@ Test ZYFun config sites availability (HTTP reachable + valid JSON + data not emp
 import json, re, sys
 import urllib.request
 import urllib.error
+import urllib.parse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # ========== CONFIG ==========
@@ -32,10 +33,24 @@ def save_json(path, data):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
+def _fix_chinese_url(url):
+    """Encode Chinese characters in URL to percent-encoding"""
+    try:
+        parsed = urllib.parse.urlsplit(url)
+        # Only encode path and query if they contain non-ASCII
+        path = urllib.parse.quote(parsed.path, safe='/:@!$&\'()*+,;=-._~')
+        query = urllib.parse.quote(parsed.query, safe='=&+%:/@!$\'()*+,;-._~')
+        return urllib.parse.urlunsplit((parsed.scheme, parsed.netloc, path, query, parsed.fragment))
+    except Exception:
+        return url
+
+
 def make_request(url, method="GET", timeout=TIMEOUT):
     """Send request, return (success, reason, status_code, content_preview)"""
     if not url or not url.startswith("http"):
         return False, "INVALID_URL", 0, ""
+    # Fix Chinese characters in URL
+    url = _fix_chinese_url(url)
     try:
         req = urllib.request.Request(url, method=method, headers={"User-Agent": UA})
         with urllib.request.urlopen(req, timeout=timeout) as resp:
@@ -59,24 +74,45 @@ def make_request(url, method="GET", timeout=TIMEOUT):
         return False, f"ERR:{str(e)[:30]}", 0, ""
 
 
-def test_api_content(url):
-    """GET api URL, check if returns valid JSON with non-empty list"""
-    ok, reason, code, text = make_request(url, method="GET")
+def test_api_content(url, stype=1):
+    """GET api URL, check if returns valid JSON/XML with non-empty list"""
+    # For T1 CMS APIs, try JSON endpoint first (append ?ac=list if no params)
+    test_url = url
+    if stype == 1 and '?' not in url:
+        test_url = url.rstrip('/') + '/?ac=list'
+
+    ok, reason, code, text = make_request(test_url, method="GET")
     if not ok:
-        return ok, reason, ""
+        # If ?ac=list failed, try original URL
+        if test_url != url:
+            ok, reason, code, text = make_request(url, method="GET")
+        if not ok:
+            return ok, reason, ""
 
     text = text.strip()
     if not text:
         return False, "EMPTY", ""
 
-    # Remove JSONP callback
-    text = re.sub(r'^[^(]+\(', '', text)
-    text = re.sub(r'\);?\s*$', '', text)
-    text = text.strip()
+    # Only strip JSONP callback if NOT starting with { or [
+    # (valid JSON starts with { or [, JSONP starts with callback_name( )
+    if not text.startswith('{') and not text.startswith('['):
+        text = re.sub(r'^[^(]+\(', '', text)
+        text = re.sub(r'\);?\s*$', '', text)
+        text = text.strip()
 
+    # Try JSON parse first
     try:
         data = json.loads(text)
     except json.JSONDecodeError:
+        # Maybe XML? Check if it looks like valid CMS XML response
+        if '<rss' in text or '<list' in text or 'vod_list' in text or '<?xml' in text:
+            # XML format - count <video> or <vod> entries
+            video_count = text.count('<video>') + text.count('<vod>')
+            if video_count > 0 or '<list' in text:
+                return True, "OK_XML", text[:200]
+            # XML with page info but maybe empty list
+            if 'pagecount' in text or 'page' in text:
+                return True, "OK_XML_EMPTY", text[:200]
         return False, "NOT_JSON", ""
 
     # Check for video API format
@@ -88,6 +124,9 @@ def test_api_content(url):
                     return True, "OK", text[:200]
                 elif isinstance(val, (dict, str)) and val:
                     return True, "OK", text[:200]
+        # Has page info = valid CMS API even if list is empty on this page
+        if 'pagecount' in data or 'page' in data:
+            return True, "OK_EMPTY_PAGE", text[:200]
         return False, "NO_LIST", ""
     elif isinstance(data, list):
         if len(data) > 0:
@@ -119,19 +158,35 @@ def test_site(site):
     }
 
     if stype == 1:
-        ok, reason, preview = test_api_content(api)
+        ok, reason, preview = test_api_content(api, stype=1)
         result["status"] = "WORKING" if ok else f"FAIL_{reason}"
         result["detail"] = preview[:100] if preview else reason
         return result
 
     elif stype == 12:
-        ok, reason, _, _ = make_request(api, method="HEAD")
+        ok, reason, _, _ = make_request(api, method="GET")
         if ok:
             result["status"] = "REACHABLE"
             result["detail"] = "Script URL reachable (cannot verify execution)"
         else:
             result["status"] = f"FAIL_{reason}"
             result["detail"] = reason
+        return result
+
+    elif stype == 7:
+        # DRPY: check both api (engine) and ext (script)
+        ok_api, reason_api, _, _ = make_request(api, method="HEAD")
+        ext = site.get("ext", "")
+        ok_ext, reason_ext, _, _ = make_request(ext, method="HEAD") if ext else (False, "NO_EXT", 0, "")
+        if ok_api and ok_ext:
+            result["status"] = "WORKING"
+            result["detail"] = "Engine + Script both reachable"
+        elif ok_api:
+            result["status"] = "FAIL_EXT"
+            result["detail"] = f"Engine OK, Script FAIL: {reason_ext}"
+        else:
+            result["status"] = f"FAIL_{reason_api}"
+            result["detail"] = reason_api
         return result
 
     else:
@@ -178,7 +233,7 @@ def run():
                 continue
 
             status = res["status"]
-            if status == "WORKING" or status == "REACHABLE" or ("NO_LIST" not in status and not status.startswith("FAIL")):
+            if status in ("WORKING", "REACHABLE") or status.startswith("OK"):
                 ok_count += 1
                 results.append(("OK", res))
             else:
