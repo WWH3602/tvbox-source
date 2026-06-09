@@ -1,55 +1,9 @@
 {
   "lives": [
     {
-      "name": "泫穹｜Global直播",
-      "type": 0,
-      "url": "https://live.fanmingming.com/tv/m3u/global.m3u",
-      "playerType": 1,
-      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "https://live.fanmingming.com/tv/{name}.png"
-    },
-    {
-      "name": "泫穹｜IPTV(IPv6)",
-      "type": 0,
-      "url": "https://live.fanmingming.com/tv/m3u/ipv6.m3u",
-      "playerType": 1,
-      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "https://live.fanmingming.com/tv/{name}.png"
-    },
-    {
-      "name": "泫穹｜Radio电台",
-      "type": 0,
-      "url": "https://live.fanmingming.com/radio/m3u/index.m3u",
-      "playerType": 1
-    },
-    {
       "name": "泫穹｜综合520台",
       "type": 0,
       "url": "https://gh-proxy.com/raw.githubusercontent.com/imDazui/Tvlist-awesome-m3u-m3u8/master/m3u",
-      "playerType": 1,
-      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "https://live.fanmingming.com/tv/{name}.png"
-    },
-    {
-      "name": "泫穹｜Ftindy高清",
-      "type": 0,
-      "url": "https://gh-proxy.com/raw.githubusercontent.com/Ftindy/IPTV-URL/main/IPTV.m3u",
-      "playerType": 1,
-      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "https://live.fanmingming.com/tv/{name}.png"
-    },
-    {
-      "name": "泫穹｜joevess源",
-      "type": 0,
-      "url": "https://gh-proxy.com/raw.githubusercontent.com/joevess/IPTV/main/iptv.m3u8",
-      "playerType": 1,
-      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "https://live.fanmingming.com/tv/{name}.png"
-    },
-    {
-      "name": "泫穹｜zbefine源",
-      "type": 0,
-      "url": "https://gh-proxy.com/raw.githubusercontent.com/zbefine/iptv/main/iptv.m3u",
       "playerType": 1,
       "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
       "logo": "https://live.fanmingming.com/tv/{name}.png"
@@ -63,9 +17,9 @@
       "logo": "https://live.fanmingming.com/tv/{name}.png"
     },
     {
-      "name": "泫穹｜Meroser源",
+      "name": "泫穹｜Global直播",
       "type": 0,
-      "url": "https://gh-proxy.com/raw.githubusercontent.com/Meroser/IPTV/main/IPTV.m3u",
+      "url": "https://live.fanmingming.com/tv/m3u/global.m3u",
       "playerType": 1,
       "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
       "logo": "https://live.fanmingming.com/tv/{name}.png"
