@@ -1,6 +1,17 @@
 {
   "sites": [
     {
+      "key": "xuanqiong_liangzi",
+      "name": "泫穹｜量子资源",
+      "type": 1,
+      "api": "http://www.lzzy.tv/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1,
+      "playerType": -1
+    },
+    {
       "key": "xuanqiong_ruyi",
       "name": "泫穹｜如意采集",
       "type": 1,
@@ -16,17 +27,6 @@
       "name": "泫穹｜魔都动漫",
       "type": 1,
       "api": "https://caiji.moduapi.cc/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "changeable": 1,
-      "playerType": -1
-    },
-    {
-      "key": "xuanqiong_liangzi",
-      "name": "泫穹｜量子资源",
-      "type": 1,
-      "api": "http://www.lzzy.tv/api.php/provide/vod/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
