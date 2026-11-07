@@ -1,6 +1,17 @@
 {
   "sites": [
     {
+      "key": "xuanqiong_hongguo",
+      "name": "泫穹｜红果短剧",
+      "type": 3,
+      "api": "https://wwh3602.github.io/tvbox-source/py/hongguo.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1,
+      "group": "短剧"
+    },
+    {
       "key": "xuanqiong_liangzi",
       "name": "泫穹｜量子资源",
       "type": 1,
@@ -388,16 +399,6 @@
       "type": 3,
       "api": "https://bitbucket.org/xduo/duoapi/raw/master/drpy2.min.js",
       "ext": "https://bitbucket.org/xduo/duoapi/raw/master/js/稀饭动漫.js",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "changeable": 1
-    },
-    {
-      "key": "xuanqiong_hongguo",
-      "name": "泷穹｜红果短剧",
-      "type": 3,
-      "api": "https://wwh3602.github.io/tvbox-source/py/hongguo.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
