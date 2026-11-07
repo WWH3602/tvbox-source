@@ -392,6 +392,16 @@
       "quickSearch": 1,
       "filterable": 1,
       "changeable": 1
+    },
+    {
+      "key": "xuanqiong_hongguo",
+      "name": "泷穹｜红果短剧",
+      "type": 3,
+      "api": "https://wwh3602.github.io/tvbox-source/py/hongguo.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1
     }
   ],
   "parses": [
@@ -420,6 +430,6 @@
     "pptv",
     "tudou"
   ],
-  "wallpaper": "http://www.饭太硬.top/深色壁纸/api.php",
-  "spider": ""
+  "wallpaper": "http://www.xn--ihqu10b4vd.top/深色壁纸/api.php",
+  "spider": "https://wwh3602.github.io/tvbox-source/jar/xs.jar"
 }

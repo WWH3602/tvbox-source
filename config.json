@@ -401,6 +401,44 @@
       "filterable": 1,
       "changeable": 1,
       "ext": "https://bitbucket.org/xduo/duoapi/raw/master/js/稀饭动漫.js"
+    },
+    {
+      "key": "xuanqiong_hongguo",
+      "name": "泷穹｜红果短剧",
+      "type": 3,
+      "api": "https://wwh3602.github.io/tvbox-source/py/hongguo.py",
+      "group": "短剧",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1
     }
+  ],
+  "spider": "https://wwh3602.github.io/tvbox-source/jar/xs.jar",
+  "wallpaper": "http://www.xn--ihqu10b4vd.top/深色壁纸/api.php",
+  "parses": [
+    {
+      "name": "解析聚合",
+      "type": 3,
+      "url": "Demo"
+    },
+    {
+      "name": "Web聚合",
+      "type": 3,
+      "url": "Web"
+    }
+  ],
+  "flags": [
+    "youku",
+    "qq",
+    "iqiyi",
+    "qiyi",
+    "mgtv",
+    "imgo",
+    "letv",
+    "leshi",
+    "sohu",
+    "pptv",
+    "tudou"
   ]
 }

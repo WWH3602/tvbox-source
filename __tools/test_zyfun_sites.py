@@ -9,10 +9,16 @@ import urllib.parse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # ========== CONFIG ==========
-ZYFUN_CONFIG = r"D:\AI赋能中心\03_知识资产仓\个人生活\02_影音娱乐\02_影视源库\zyfun\zy_config_20260609.json"
-OUTPUT_WORKING = r"D:\AI赋能中心\03_知识资产仓\个人生活\02_影音娱乐\02_影视源库\tvbox-source\__temp\zyfun_test_working.json"
-OUTPUT_FAILED = r"D:\AI赋能中心\03_知识资产仓\个人生活\02_影音娱乐\02_影视源库\tvbox-source\__temp\zyfun_test_failed.json"
-OUTPUT_STATS = r"D:\AI赋能中心\03_知识资产仓\个人生活\02_影音娱乐\02_影视源库\tvbox-source\__temp\zyfun_test_stats.json"
+# 兼容旧 zyfun 目录结构：如该文件不存在，则使用 tvbox-source/zyfun_config.json
+_DEFAULT_ZYFUN = r"D:\AI赋能中心\03_知识资产仓\个人生活\02_影音娱乐\02_影视源库\tvbox-source\zyfun_config.json"
+_LEGACY_ZYFUN = r"D:\AI赋能中心\03_知识资产仓\个人生活\02_影音娱乐\02_影视源库\zyfun\zy_config_20260609.json"
+
+import os as _os
+ZYFUN_CONFIG = _LEGACY_ZYFUN if _os.path.exists(_LEGACY_ZYFUN) else _DEFAULT_ZYFUN
+OUTPUT_DIR = r"D:\AI赋能中心\03_知识资产仓\个人生活\02_影音娱乐\02_影视源库\tvbox-source\__temp"
+OUTPUT_WORKING = _os.path.join(OUTPUT_DIR, "zyfun_test_working.json")
+OUTPUT_FAILED = _os.path.join(OUTPUT_DIR, "zyfun_test_failed.json")
+OUTPUT_STATS = _os.path.join(OUTPUT_DIR, "zyfun_test_stats.json")
 
 MAX_WORKERS = 30
 TIMEOUT = 8

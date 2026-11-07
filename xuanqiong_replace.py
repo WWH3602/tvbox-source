@@ -32,7 +32,7 @@ def save_json(path, data):
     print(f"  已写入: {path}")
 
 
-def to_tvbox_config(sites: list) -> dict:
+def to_tvbox_config(sites: list, raw_xuanqiong: dict = None) -> dict:
     """xuanqiong 格式 → TVBox config 格式"""
     tvbox_sites = []
     for site in sites:
@@ -42,7 +42,9 @@ def to_tvbox_config(sites: list) -> dict:
         searchable = site.get("searchable", 1)
 
         # 根据名称确定 group
-        if "音乐" in name or "听" in name:
+        if "短剧" in name or "红果" in name:
+            group = "短剧"
+        elif "音乐" in name or "听" in name:
             group = "音乐"
         elif "动漫" in name:
             group = "动漫"
@@ -76,7 +78,12 @@ def to_tvbox_config(sites: list) -> dict:
 
         tvbox_sites.append(item)
 
-    return {"sites": tvbox_sites}
+    res = {"sites": tvbox_sites}
+    if raw_xuanqiong:
+        for k in ["spider", "wallpaper", "parses", "flags", "lives"]:
+            if k in raw_xuanqiong and raw_xuanqiong[k]:
+                res[k] = raw_xuanqiong[k]
+    return res
 
 
 def to_zyfun_config(sites: list) -> dict:
@@ -89,7 +96,9 @@ def to_zyfun_config(sites: list) -> dict:
         searchable = site.get("searchable", 1)
 
         # 根据名称确定 group
-        if "音乐" in name or "听" in name:
+        if "短剧" in name or "红果" in name:
+            group = "短剧"
+        elif "音乐" in name or "听" in name:
             group = "音乐"
         elif "动漫" in name:
             group = "动漫"
@@ -137,12 +146,12 @@ def main():
     # 打印源站列表
     print("\n    源站列表:")
     for s in src_sites:
-        tname = {1: "JSON", 3: "Python", 7: "DRPY/JS"}.get(s.get("type", 1), "Unknown")
+        tname = {1: "JSON", 3: "Python/Spider", 7: "DRPY/JS"}.get(s.get("type", 1), "Unknown")
         print(f"      [{tname}] {s['name']} ({s.get('key', '')})")
 
     # 2. 生成新配置
     print(f"\n[2] 生成新配置...")
-    new_config = to_tvbox_config(src_sites)
+    new_config = to_tvbox_config(src_sites, xuanqiong)
     new_zyfun = to_zyfun_config(src_sites)
     print(f"    TVBox: {len(new_config['sites'])} 个站点")
     print(f"    ZYFun: {len(new_zyfun['site'])} 个站点")

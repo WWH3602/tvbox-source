@@ -11,7 +11,7 @@
 
 | 名称 | 地址 |
 |:---|:---|
-| **泫穹单仓**（36站，人工验证） | `https://wwh3602.github.io/tvbox-source/_warehouse/xuanqiong_single.json` |
+| **泫穹单仓**（37站，人工验证） | `https://wwh3602.github.io/tvbox-source/_warehouse/xuanqiong_single.json` |
 | **泫穹聚合仓**（13源，多仓切换） | `https://wwh3602.github.io/tvbox-source/_warehouse/xuanqiong_agg.json` |
 
 ### 直播仓
@@ -27,7 +27,7 @@
 | # | 仓库 | 说明 |
 |:---|:---|:---|
 | 1 | 王二小放牛娃 | `http://tv.999888987.xyz` |
-| 2 | 泫穹单仓 | 自建 36 站 |
+| 2 | 泫穹单仓 | 自建 37 站（含红果短剧） |
 | 3 | 王小二 | `https://9280.kstore.vip/newwex.json` |
 | 4 | 影视仓 | `http://影视仓.com/` |
 | 5 | 二月红接口 | `https://700sjro44343.vicp.fun/eggp/0211/tv.json` |
@@ -64,7 +64,7 @@
 ```
 tvbox-source/
 ├── _warehouse/                   ← 泫穹系列配置
-│   ├── xuanqiong_single.json     ← 单仓（36站，人工验证）
+│   ├── xuanqiong_single.json     ← 单仓（37站，人工验证）
 │   ├── xuanqiong_agg.json        ← 聚合仓（13源，多仓切换）
 │   └── xuanqiong_zb.json         ← 直播仓（10源，EPG+台标）
 │
@@ -98,7 +98,7 @@ tvbox-source/
 
 | 日期 | 操作 |
 |:---|:---|
-| 2026-06-09 | v3.0 泫穹系列：单仓36站 + 聚合仓13源 + 直播仓10源 |
+| 2026-06-09 | v3.0 泫穹系列：单仓37站 + 聚合仓13源 + 直播仓10源 |
 | 2026-06-09 | 人工验证41条可用线路，创建正式文档 |
 | 2026-06-09 | 修复测试脚本3个bug（中文URL/XML/JSONP），可用站65→80 |
 | 2026-06-08 | v2.0 重构目录结构 |

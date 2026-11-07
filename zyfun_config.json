@@ -1,7 +1,7 @@
 {
   "site": [
     {
-      "id": "2e434090-a891-4ca3-b621-6f1231ccd471",
+      "id": "fd0d1d42-3063-44e9-891b-5bb26d38ec5b",
       "key": "xuanqiong_liangzi",
       "name": "泫穹｜量子资源",
       "api": "http://www.lzzy.tv/api.php/provide/vod/",
@@ -12,11 +12,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "f4ad7de5-f4a1-4913-8e0f-ba11917088a6",
+      "id": "cb82bb39-adc4-4b41-90f2-8364ed99613f",
       "key": "xuanqiong_ruyi",
       "name": "泫穹｜如意采集",
       "api": "https://cj.rycjapi.com/api.php/provide/vod/",
@@ -27,11 +27,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "ef4e6172-91b0-4f2c-862c-d6bb951d3a16",
+      "id": "1ba562c5-962c-4f7c-9047-a704cf1a54ad",
       "key": "xuanqiong_modu",
       "name": "泫穹｜魔都动漫",
       "api": "https://caiji.moduapi.cc/api.php/provide/vod/",
@@ -42,11 +42,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "8aa254f4-2cd5-4d6a-a7ca-3d4f7dacd876",
+      "id": "903ba336-3bfd-423f-84fc-73cf1a712aec",
       "key": "xuanqiong_xinlang",
       "name": "泫穹｜新浪资源",
       "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/",
@@ -57,11 +57,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "e443bf49-55c1-4112-bc40-45a90b5ec2bb",
+      "id": "ae2890eb-aa83-4dea-9c66-93cea4473212",
       "key": "xuanqiong_guangsu",
       "name": "泫穹｜光速资源",
       "api": "https://api.guangsuapi.com/api.php/provide/vod/",
@@ -72,11 +72,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "3191e183-9a0e-41cd-a523-6f9b0d27485a",
+      "id": "fb293b74-77f8-471d-a6ef-3983f47b8ac7",
       "key": "xuanqiong_jinying",
       "name": "泫穹｜金鹰资源",
       "api": "https://jyzyapi.com/provide/vod/",
@@ -87,11 +87,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "d146f65e-cad6-4d4b-bbfd-d57859a2b94c",
+      "id": "708f112f-6c7c-4dc3-8416-14ae1257a66e",
       "key": "xuanqiong_feifan",
       "name": "泫穹｜非凡资源",
       "api": "http://cj.ffzyapi.com/api.php/provide/vod/from/ffm3u8/",
@@ -102,11 +102,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "4d56383d-94e3-4e0a-98a1-4358551f75e0",
+      "id": "e330dbb2-0c60-4798-b400-481217de2fea",
       "key": "xuanqiong_ikun",
       "name": "泫穹｜iKun资源",
       "api": "https://ikunzyapi.com/api.php/provide/vod",
@@ -117,11 +117,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "ee6eea6e-4eea-42a6-b1d3-70f2a223c017",
+      "id": "7a90c4dd-03f7-476f-9846-aa00795963d8",
       "key": "xuanqiong_1080zyku",
       "name": "泫穹｜1080zyku",
       "api": "http://api.1080zyku.com/inc/api_mac10.php",
@@ -132,11 +132,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "1aad0ae3-25ec-4863-982a-c4a4631c5d19",
+      "id": "91e4e26a-9281-44db-8fb0-47caa8014a10",
       "key": "xuanqiong_uku",
       "name": "泫穹｜U酷资源",
       "api": "https://api.ukuapi.com/api.php/provide/vod/",
@@ -147,11 +147,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "ff3ef0e9-b5e0-4b23-b6cf-6beccbdaa24f",
+      "id": "8dcb181f-260e-41ad-9ff9-cc7d95ef24f3",
       "key": "xuanqiong_wujin",
       "name": "泫穹｜无尽资源",
       "api": "https://api.wujinapi.me/api.php/provide/vod/",
@@ -162,11 +162,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "23679aa4-7a55-4b8c-a107-a403232112a4",
+      "id": "6db9821c-4c16-4eff-aeed-459fc10726bc",
       "key": "xuanqiong_hongniu",
       "name": "泫穹｜红牛资源",
       "api": "https://www.hongniuzy2.com/api.php/provide/vod/",
@@ -177,11 +177,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "5c443fb8-7a65-49f7-90a9-621ad9b05964",
+      "id": "0b60efe7-002e-485e-9911-f1df3117f7af",
       "key": "xuanqiong_zuida",
       "name": "泫穹｜最大资源",
       "api": "https://api.zuidapi.com/api.php/provide/vod/",
@@ -192,11 +192,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "1dff5fcd-e94a-4cc2-88f0-aaab55cc3fea",
+      "id": "3ff723fb-865f-4d27-91f6-e2d2766b0cd5",
       "key": "xuanqiong_jisu",
       "name": "泫穹｜极速资源",
       "api": "https://jszyapi.com/api.php/provide/vod/",
@@ -207,11 +207,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "516877c9-c5e3-46da-a692-cd30af409670",
+      "id": "25172895-c261-4d16-855a-11e6bd8bf387",
       "key": "xuanqiong_youzhi",
       "name": "泫穹｜优质资源网",
       "api": "https://api.1080zyku.com/inc/apijson.php",
@@ -222,11 +222,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "45e33e59-fe30-4c0b-b089-630d2ad18446",
+      "id": "70b38155-5d55-4dfe-9bc6-9d3da2ed26ce",
       "key": "xuanqiong_haohua",
       "name": "泫穹｜豪华资源",
       "api": "https://hhzyapi.com/api.php/provide/vod",
@@ -237,11 +237,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "ca1238f2-081b-4036-bd32-976bd5721f09",
+      "id": "cb56d036-cb61-4ea9-a801-42d487f777d3",
       "key": "xuanqiong_subo",
       "name": "泫穹｜速播资源",
       "api": "http://suboziyuan.net/api.php/provide/vod/",
@@ -252,11 +252,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "f7bfddef-b2c9-4e09-a2ee-93e9a6619bb3",
+      "id": "0f9a25b3-f865-4a44-ad28-6ec80e73760e",
       "key": "xuanqiong_taopian",
       "name": "泫穹｜淘片资源",
       "api": "https://taopianapi.com/cjapi/mc10/vod/json.html",
@@ -267,11 +267,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "74a3d682-c10d-4612-a16c-fdc5cb3d918d",
+      "id": "d0d94a44-9aa0-46cf-b04b-9fd2acea811f",
       "key": "xuanqiong_baofeng",
       "name": "泫穹｜暴风资源",
       "api": "https://bfzyapi.com/api.php/provide/vod/",
@@ -282,11 +282,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "b0019fe2-1726-49e3-99ac-d8b30e0989bc",
+      "id": "b9a03f9d-34ba-4bd4-8019-6cda84b65688",
       "key": "xuanqiong_shandian",
       "name": "泫穹｜闪电资源",
       "api": "https://sdzyapi.com/api.php/provide/vod/",
@@ -297,11 +297,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "9d76e5ad-71fe-4faf-8783-eeae6944a0ec",
+      "id": "6e91c170-fa23-410b-a439-c900ec5074ea",
       "key": "xuanqiong_wujin_cj",
       "name": "泫穹｜无尽采集",
       "api": "https://api.wujinapi.net/api.php/provide/vod/",
@@ -312,11 +312,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "8dbd4de8-90fe-4daf-b886-369232add1a8",
+      "id": "107ab2c7-f2e4-4e91-bb5d-6cd90ec9c336",
       "key": "xuanqiong_yinghua",
       "name": "泫穹｜樱花采集",
       "api": "https://m3u8.apiyhzy.com/api.php/provide/vod/",
@@ -327,11 +327,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "a7b46a54-0a3b-4f5b-a893-bff661d0b951",
+      "id": "dfe2c5cb-ddb5-418e-a0eb-c6e3c3ee0552",
       "key": "xuanqiong_tiantang",
       "name": "泫穹｜天堂采集",
       "api": "http://caiji.dyttzyapi.com/api.php/provide/vod/",
@@ -342,11 +342,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "0027c1e5-5b41-4d6c-b788-5a98a6a7f983",
+      "id": "cdd73899-33a6-4c57-81d2-afa23975086c",
       "key": "xuanqiong_suoni",
       "name": "泫穹｜索尼采集",
       "api": "https://suoniapi.com/api.php/provide/vod/",
@@ -357,11 +357,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "9a9474c0-ed4f-45c3-89fd-8d7516d33127",
+      "id": "3a1cbe00-44cc-402f-b143-73dba71af7f8",
       "key": "xuanqiong_aidan",
       "name": "泫穹｜艾旦采集",
       "api": "https://www.lovedan.net/api.php/provide/vod/",
@@ -372,11 +372,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "2baf12d8-37c6-40d1-aa37-3db712cd3959",
+      "id": "851738e2-a6d4-4b83-8731-de549e6335ce",
       "key": "xuanqiong_subo_cj",
       "name": "泫穹｜速播采集",
       "api": "https://subocaiji.com/api.php/provide/vod/",
@@ -387,11 +387,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "400e1877-f2b3-412c-bb13-c6c0985530ea",
+      "id": "ad69c0c1-706a-443b-9a5f-27958d6f9b4f",
       "key": "xuanqiong_liangzi_cj",
       "name": "泫穹｜量子采集",
       "api": "https://cj.lziapi.com/api.php/provide/vod/",
@@ -402,11 +402,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "e0c2d535-a952-4ad1-8efc-bc9d0215d676",
+      "id": "f8a1f347-a5ba-4392-bcaa-56863e0d4608",
       "key": "xuanqiong_aiting",
       "name": "泫穹｜爱听音乐",
       "api": "https://qist.wyfc.qzz.io/xiaosa/py/爱听音乐.py",
@@ -417,11 +417,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "9b02b5bc-0bde-4abd-a1e2-42f15a8fd749",
+      "id": "77e750f6-3360-4393-94f4-e01dcc57d922",
       "key": "xuanqiong_wangluo",
       "name": "泫穹｜网络直播",
       "api": "https://qist.wyfc.qzz.io/xiaosa/py/网络直播.py",
@@ -432,11 +432,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "4730247d-11f0-4484-9161-f3f888a2307f",
+      "id": "7b066822-e500-4ce3-84b4-ad65e950ff52",
       "key": "xuanqiong_guazi",
       "name": "泫穹｜瓜子影视",
       "api": "https://cdn.jsdmirror.com/gh/ouhaibo1980/tvbox@main/py/瓜子.py",
@@ -447,11 +447,11 @@
       "ext": "",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "51c52a1f-0251-463a-bd37-92126f10ab15",
+      "id": "786e9e42-bb7a-4bd5-8101-16e42073d2a0",
       "key": "xuanqiong_360",
       "name": "泫穹｜360影视",
       "api": "https://gh-proxy.com/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
@@ -462,11 +462,11 @@
       "ext": "https://gh-proxy.com/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/js/360影视.js",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "87174cb3-00fa-458b-b689-520e7c0f82a1",
+      "id": "6de98543-5f31-405b-b0b1-ceb1eff2e702",
       "key": "xuanqiong_88kanqiu",
       "name": "泫穹｜88看球",
       "api": "https://gh-proxy.com/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
@@ -477,11 +477,11 @@
       "ext": "https://gh-proxy.com/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/js/88看球.js",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "2fac16ad-68c3-4401-9064-6774e5e70c25",
+      "id": "05b5e340-8c5d-4df0-be23-e39a1c62766d",
       "key": "xuanqiong_renren",
       "name": "泫穹｜人人电影",
       "api": "https://bitbucket.org/xduo/duoapi/raw/master/drpy2.min.js",
@@ -492,11 +492,11 @@
       "ext": "https://bitbucket.org/xduo/duoapi/raw/master/js/人人电影.js",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "3f358f25-2ed7-4bcd-9a7f-79c579a0f97e",
+      "id": "9a81de5e-d464-4655-994d-b031d0ec7f7e",
       "key": "xuanqiong_quake",
       "name": "泫穹｜夸克影视",
       "api": "https://bitbucket.org/xduo/duoapi/raw/master/drpy2.min.js",
@@ -507,11 +507,11 @@
       "ext": "https://bitbucket.org/xduo/duoapi/raw/master/js/夸克影视.js",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "6212fdf9-1fec-45e0-8bf9-188291017aba",
+      "id": "d5536b41-80f7-4bc4-aef1-cc652b3988e4",
       "key": "xuanqiong_nini",
       "name": "泫穹｜泥泥视频",
       "api": "https://bitbucket.org/xduo/duoapi/raw/master/drpy2.min.js",
@@ -522,11 +522,11 @@
       "ext": "https://bitbucket.org/xduo/duoapi/raw/master/js/泥泥视频.js",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     },
     {
-      "id": "585a76b5-657e-4a2a-99d9-117129d4494d",
+      "id": "40731be0-1258-4fc9-83b7-954c7da6f776",
       "key": "xuanqiong_xifan",
       "name": "泫穹｜稀饭动漫",
       "api": "https://bitbucket.org/xduo/duoapi/raw/master/drpy2.min.js",
@@ -537,8 +537,23 @@
       "ext": "https://bitbucket.org/xduo/duoapi/raw/master/js/稀饭动漫.js",
       "categories": "",
       "isActive": true,
-      "createdAt": 1780992813464,
-      "updatedAt": 1780992813464
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
+    },
+    {
+      "id": "9d909822-c22e-47b0-b01d-6d37e1b50eac",
+      "key": "xuanqiong_hongguo",
+      "name": "泷穹｜红果短剧",
+      "api": "https://wwh3602.github.io/tvbox-source/py/hongguo.py",
+      "playUrl": "",
+      "search": true,
+      "group": "短剧",
+      "type": 3,
+      "ext": "",
+      "categories": "",
+      "isActive": true,
+      "createdAt": 1794059721936,
+      "updatedAt": 1794059721936
     }
   ]
 }
